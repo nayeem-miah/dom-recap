@@ -21,6 +21,21 @@
             padding: 4px;
             background-color: rgb(230, 224, 216);
         }
+
+    h1 {
+      color: #2c3e50;
+    }
+    section {
+      background: #fff;
+      padding: 15px 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      max-width: 700px;
+      margin: auto;
+    }
+    ul {
+      margin-left: 20px;
+    }
     </style>
 
 
@@ -30,16 +45,34 @@
         Hello form Dom
     </header>
     <main>
-        <section>
-            <h1>My Awesome DOM</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum optio iure quaerat, blanditiis doloremque obcaecati sed aut. Voluptate alias ipsam voluptatem rem, consequuntur repellendus explicabo amet esse, provident ad dolores.</p>
-        <ul>
-            <li>jalali set</li>
-            <li>jalali set</li>
-            <li>jalali set</li>
-            <li>jalali set</li>
-        </ul>
+         <section>
+    <h1>DOM এর ধরন এবং সাধারণ মেথডসমূহ</h1>
+
+    <h2>DOM এর ধরন (Types of DOM)</h2>
+    <p>DOM মূলত ৩ ধরনের হয়ঃ</p>
+    <ul>
+      <li><strong>1. Legacy DOM:</strong> পুরনো ব্রাউজার ভিত্তিক DOM, যা খুব basic ফিচার দেয়।</li>
+      <li><strong>2. XML DOM:</strong> XML ডকুমেন্টের জন্য DOM, যা XML ডাটা ম্যানেজ করে।</li>
+      <li><strong>3. HTML DOM:</strong> HTML ডকুমেন্টের জন্য DOM, যা ওয়েব পেজের HTML উপাদানগুলোকে প্রোগ্রাম থেকে নিয়ন্ত্রণ করে।</li>
+    </ul>
+
+    <h2>DOM থেকে এলিমেন্ট সিলেক্ট করার মেথড</h2>
+    <ul>
+      <li><code>getElementById(id)</code>  
+        <br>একটি নির্দিষ্ট <code>id</code> অনুসারে একটি এলিমেন্ট নির্বাচন করে। এটি একটি <strong>single</strong> এলিমেন্ট রিটার্ন করে।  
+        <br><strong>উদাহরণ:</strong> <code>document.getElementById('header')</code></li>
+
+      <li><code>getElementsByClassName(className)</code>  
+        <br>নির্দিষ্ট <code>class</code> নামের সব এলিমেন্টের কালেকশন রিটার্ন করে। এটি একটি <strong>HTMLCollection</strong> (array-like object) দেয়।  
+        <br><strong>উদাহরণ:</strong> <code>document.getElementsByClassName('menu-item')</code></li>
+
+      <li><code>getElementsByTagName(tagName)</code>  
+        <br>নির্দিষ্ট ট্যাগ নামের সব এলিমেন্টের কালেকশন রিটার্ন করে। যেমন সব <code>p</code> বা <code>div</code> এলিমেন্ট।  
+        <br><strong>উদাহরণ:</strong> <code>document.getElementsByTagName('p')</code></li>
+    </ul>
         </section>
+
+
        <section>
          <h1 id="fruits-title">My fruits </h1>
         <ul>

@@ -19,3 +19,17 @@ h1{
     color: blueviolet;
     font-size: medium;
 }
+
+.header-section{
+    background-color: rgb(212, 227, 240);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.header-title{
+    background-color: rgb(212, 227, 240);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
