@@ -1,0 +1,21 @@
+/* external CSS */
+
+
+*{
+    margin: 0;
+    padding: 0;
+};
+
+
+h1{
+    color: blueviolet;
+}
+
+#fruits-title{
+    color: rgb(227, 131, 5);
+    background-attachment: scroll;
+}
+.importance-places{
+    color: blueviolet;
+    font-size: medium;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour of Dmo</title>
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- internal CSS -->
+    <style>
+        li{
+            color: green;
+        }
+        footer{
+            text-align: center;
+            padding: 4px;
+            background-color: rgb(230, 224, 216);
+        }
+        header{
+            text-align: center;
+            padding: 4px;
+            background-color: rgb(230, 224, 216);
+        }
+    </style>
+
+
+</head>
+<body>
+    <header>
+        Hello form Dom
+    </header>
+    <main>
+        <section>
+            <h1>My Awesome DOM</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum optio iure quaerat, blanditiis doloremque obcaecati sed aut. Voluptate alias ipsam voluptatem rem, consequuntur repellendus explicabo amet esse, provident ad dolores.</p>
+        <ul>
+            <li>jalali set</li>
+            <li>jalali set</li>
+            <li>jalali set</li>
+            <li>jalali set</li>
+        </ul>
+        </section>
+       <section>
+         <h1 id="fruits-title">My fruits </h1>
+        <ul>
+            <li>Apple</li>
+            <li>Mango</li>
+            <li>Banana</li>
+            <li>Orange</li>
+        </ul>
+       </section>
+
+       <section>
+        <h1 id="places-title">
+            please visit places
+        </h1>
+        <ul>
+            <li class="importance-places">Sundorban</li>
+            <li class="importance-places">Kataban</li>
+            <li class="importance-places">ShalBna</li>
+            <li>khalaban</li>
+        </ul>
+       </section>
+    </main>
+    <footer>
+        This is DOM footer @2025
+    </footer>
+    <script src="/js/dom.js"></script>
+
+    <!-- internal js -->
+    <script>
+        const getTagNameFooter= document.getElementsByTagName("footer");
+        console.log(getTagNameFooter);
+    </script>
+</body>
+</html>
