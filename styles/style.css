@@ -25,6 +25,7 @@ h1{
     padding: 20px;
     margin: 10px;
     border-radius: 10px;
+    
 }
 .header-title{
     background-color: rgb(212, 227, 240);
@@ -32,4 +33,27 @@ h1{
     margin: 10px;
     border-radius: 10px;
     text-align: center;
+}
+
+
+.yellow-bg{
+background-color: antiquewhite;
+}
+
+.heading{
+    text-align: center;
+    font-size: 24px;
+}
+.button{
+    padding: 4px;
+    margin-top: 8px;
+    background-color: aqua;
+    color: black;
+    text-align: center;
+    border: 1px solid orangered;
+    border-radius: 5px;
+    padding-right: 4px;
+    padding-left: 4px;
+    display: flex;
+    justify-items: center;
 }

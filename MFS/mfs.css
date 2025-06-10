@@ -1,0 +1,22 @@
+*{
+    background-color: rgb(234, 240, 240);
+    margin: 0;
+    padding: 0;
+    max-width: 720px;
+    margin: auto;
+}
+ h3 {
+    text-align: center;
+}
+.navvbar{
+    display: grid;
+    grid-column: 1;
+    gap: 10px;
+    margin: 0 auto;
+}
+.amount-container{
+    text-align: center;
+    border: 2px solid tomato;
+    padding: 20px;
+    margin: 10px  150px;
+}

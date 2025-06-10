@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>more events</title>
+    <style>
+         header{
+            text-align: center;
+            padding: 4px;
+            background-color: rgb(230, 224, 216);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navvbar">
+            <h3>Hello form Dom events</h3> <a href="index.html">tour of DOM</a>
+        </div>
+    </header>
+    <br>
+    <main>
+        <div>
+            <button id="btn-more">Events</button>
+            <input type="text" id="text-field">
+        </div>
+<hr>
+        <section>
+            <div>
+                <div id="secret-info">
+                    <h3>My secret info</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, placeat!</p>
+                </div>
+                <input type="text" id="input-value">
+                <button id="btn-delete" disabled>
+                    delete
+                </button>
+            </div>
+        </section>
+<br>
+        <hr>
+        <section>
+            <div>
+                <h1>event delegated</h1>
+                <ul id="item-list">
+                    <li class="item">amet consectetur, adipisicing elit. Eius, illum?</li>
+                    <li class="item">amet consectetur adipisicing elit. Veniam, sed!</li>
+                    <li class="item">adipisicing elit. Cupiditate, voluptatibus!</li>
+                    <li class="item"> dolor sit amet consectetur adipisicing elit. Libero, nostrum!</li>
+                    <li class="item">amet, consectetur adipisicing elit. Vel, sapiente?</li>
+                    <li class="item"> amet consectetur adipisicing elit. Ab, ea!</li>
+                </ul>
+                <button id="add-item-btn">add item</button>
+            </div>
+            <br>
+        </section>
+    </main>
+
+
+    <script>
+        // focus
+        // document.getElementById("text-field").addEventListener("focus", function(){
+        //     console.log("button triggered inside input field");
+        // });
+
+        // // blur
+        // document.getElementById("text-field").addEventListener("blur", function(){
+        //     console.log("button triggered inside input field on blur");
+        // })
+         
+        // keydown
+        // document.getElementById("text-field").addEventListener("keydown", function(event){
+        //     console.log(event.target.value);
+        // })
+
+        // keyup
+        document.getElementById("text-field").addEventListener("keyup", function(event){
+            console.log(event.target.value);
+        })
+
+        // keypress
+        // document.getElementById("text-field").addEventListener("keypress", function(event){
+        //     console.log(event.target.value);
+        // })
+         
+    
+
+        // mouseenter
+        document.getElementById("btn-more").addEventListener("mouseenter",function(){
+            console.log("button triggered");
+        } )
+
+
+
+        // delete secret info
+        
+        // confirm delete 
+        const confirmDelete = document.getElementById("input-value").addEventListener("keyup", function(event){
+            const text = event.target.value;
+            const deleteBtn = document.getElementById("btn-delete");
+            if (text === "delete") {
+                deleteBtn.removeAttribute("disabled")
+            } else {
+                deleteBtn.setAttribute("disabled", true)
+            }
+            
+            
+            
+        })
+        // deleted functionality
+        document.getElementById("btn-delete").addEventListener("click", function(){
+            const secretInfo = document.getElementById("secret-info");
+            const inputBox = document.getElementById("input-value");
+            if(inputBox.value ==="delete"){
+                secretInfo.style.display = "none";
+                alert("deleted success");
+                inputBox.value = "";
+            }
+        })
+
+
+        // ---------------event delegated---------------------------------------------
+        
+        // const items = document.getElementsByClassName("item");
+        // for(const item of items){
+        //     item.addEventListener("click", function(event){
+        //     event.target.parentNode.removeChild(event.target)
+        // })
+        // }
+        document.getElementById("item-list").addEventListener("click", function(event){
+            // console.log(event.target);
+            event.target.parentNode.removeChild(event.target);
+        })
+
+        // ------------add item click button---------------
+        document.getElementById("add-item-btn").addEventListener("click", function(){
+            const listContainer = document.getElementById('item-list');
+            const li = document.createElement("li");
+            li.innerText = "Brand new items";
+            li.classList.add("item")
+            listContainer.appendChild(li)
+        })
+        </script>
+</body>
+</html>
