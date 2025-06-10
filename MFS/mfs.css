@@ -1,22 +1,68 @@
-*{
-    background-color: rgb(234, 240, 240);
+.donate-section {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #f4f6f8;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .amount-container {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  
+  .amount-container h3 {
+    font-size: 36px;
+    color: #28a745;
     margin: 0;
-    padding: 0;
-    max-width: 720px;
-    margin: auto;
-}
- h3 {
-    text-align: center;
-}
-.navvbar{
-    display: grid;
-    grid-column: 1;
-    gap: 10px;
-    margin: 0 auto;
-}
-.amount-container{
-    text-align: center;
-    border: 2px solid tomato;
-    padding: 20px;
-    margin: 10px  150px;
-}
+  }
+  
+  .amount-container p {
+    font-size: 14px;
+    color: #555;
+    text-transform: uppercase;
+    margin: 5px 0 0;
+  }
+  
+  .form-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-container label {
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .form-container input {
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: 0.3s ease;
+  }
+  
+  .form-container input:focus {
+    outline: none;
+    border-color: #28a745;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.4);
+  }
+  
+  #donate-button {
+    padding: 12px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #donate-button:hover {
+    background-color: #218838;
+  }
+  
