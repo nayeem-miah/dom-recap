@@ -13,6 +13,10 @@ document.getElementById("donate-button").addEventListener("click", function (eve
         // set total amount
         const totalValue = document.getElementById("total-amount");
         totalValue.innerText = newBalance;
+        alert("donate success ❤️");
+        document.getElementById("donate-banalce").value = "";
+        document.getElementById("pin-number").value = "";
+
     } else {
         alert("please give me a valid pass !")
     }
